@@ -35,6 +35,7 @@ class _BottomBarState extends State<BottomBar> {
       ),
       body: Center(child: _widgetOptions[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         onTap: _onItemSelected,
         elevation: 10,
         showSelectedLabels: false,
