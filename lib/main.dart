@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study_app/screens/BottomBar.dart';
+import 'package:flutter_study_app/screens/bottom_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: true,
       ),
-      home: const BottomBar(),
+      home: const SafeArea(
+        top: true,
+        bottom: true,
+        child: BottomBar(),
+      )
     );
   }
 }
