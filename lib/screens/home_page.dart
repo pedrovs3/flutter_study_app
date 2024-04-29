@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study_app/utils/app_styles.dart';
+import 'package:gap/gap.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,25 +8,38 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Styles.bgColor,
         body: ListView(
-          children: const [
-            Column(
-              children: [
-                Row(
-                  children: [
-                    Column(
-                      children: [
-                        Text("Good Morning"),
-                        Text("Book Tickets")
-                      ],
-                    )
-                  ],
-                )
-              ],
-            )
+          children: [
+            Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(children: [
+                  const Gap(40),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Good Morning", style: Styles.headLineStyle3),
+                            const Gap(5),
+                            Text("Book Tickets", style: Styles.headLineStyle1),
+                          ]),
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            image: const DecorationImage(
+                                fit: BoxFit.fitHeight,
+                                image: AssetImage("assets/images/logo.jpg")
+                            )
+                        ),
+                      )
+                    ],
+                  )
+                ]))
           ],
-        )
-    );
+        ));
   }
 }
