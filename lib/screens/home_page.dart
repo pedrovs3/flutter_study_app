@@ -76,6 +76,7 @@ class HomePage extends StatelessWidget {
                     ],
                   )
                 ])),
+            const Gap(15),
             const TicketView()
           ],
         ));
