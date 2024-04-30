@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_study_app/screens/ticket_view.dart';
 import 'package:flutter_study_app/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 
@@ -74,7 +75,8 @@ class HomePage extends StatelessWidget {
                       )
                     ],
                   )
-                ]))
+                ])),
+            const TicketView()
           ],
         ));
   }
