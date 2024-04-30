@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study_app/utils/app_layout.dart';
 import 'package:flutter_study_app/utils/app_styles.dart';
 import 'package:flutter_study_app/widgets/thick_container.dart';
+import 'package:gap/gap.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -16,6 +17,7 @@ class TicketView extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(left: 16),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Container(
               padding: const EdgeInsets.all(16),
@@ -79,6 +81,34 @@ class TicketView extends StatelessWidget {
                         "LDN",
                         style:
                             Styles.headLineStyle3.copyWith(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  const Gap(3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          "New-York",
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.white),
+                        ),
+                      ),
+                      Text(
+                        "8H 30M",
+                        style:
+                            Styles.headLineStyle3.copyWith(color: Colors.white),
+                      ),
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          "London",
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.white),
+                          textAlign: TextAlign.end,
+                        ),
                       ),
                     ],
                   )
