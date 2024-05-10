@@ -12,19 +12,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'First project Flutter',
-      theme: ThemeData(
-        primaryColor: primary,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue, brightness: Brightness.light),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        useMaterial3: true,
-      ),
-      home: const SafeArea(
-        top: true,
-        bottom: true,
-        child: BottomBar(),
-      )
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Ticket Project',
+        theme: ThemeData(
+          primaryColor: primary,
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.blue, brightness: Brightness.light),
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          useMaterial3: true,
+        ),
+        home: const SafeArea(
+          top: true,
+          bottom: true,
+          child: BottomBar(),
+        ));
   }
 }
