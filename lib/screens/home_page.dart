@@ -1,6 +1,8 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_study_app/screens/hotel_screen.dart';
 import 'package:flutter_study_app/screens/ticket_view.dart';
+import 'package:flutter_study_app/utils/app_info_list.dart';
 import 'package:flutter_study_app/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 
@@ -14,7 +16,7 @@ class HomePage extends StatelessWidget {
         body: ListView(
           children: [
             Container(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(children: [
                   const Gap(40),
                   Row(
@@ -86,7 +88,37 @@ class HomePage extends StatelessWidget {
                   TicketView(),
                 ],
               ),
-            )
+            ),
+            const Gap(15),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Hotels",
+                    style: Styles.headLineStyle2,
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Text(
+                      "View all",
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const Gap(15),
+            SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.only(left: 20),
+                child: Row(
+                  children: hotelList
+                      .map((hotel) => HotelScreen(hotel: hotel))
+                      .toList(),
+                )),
           ],
         ));
   }
